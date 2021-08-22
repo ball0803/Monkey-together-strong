@@ -1,4 +1,4 @@
-from collections import Counter
+import re
 
 '''
 THEOS Message is the encoding of a message consisting of A-Z characters. It assembles adjacent characters
@@ -11,8 +11,32 @@ Output
 The THEOS message.
 '''
 
-s = Counter(input())
+s = input() + '-'
 translate = ''
-for char in s.keys():
-    translate += f'{s[char]}{char}'
+count = 1
+for i in range(len(s)-1):
+    if s[i] == s[i+1]:
+        count += 1
+    else:
+        translate += f'{count}{s[i]}'
+        count = 1
+
 print(translate)
+
+
+
+
+# seq =  input()
+# code = ''
+# previous_char = seq[0]
+# count = 1
+
+# for char in seq[1:]:
+#     if char == previous_char:
+#         count += 1 
+#     else:
+#         code += f'{count}{previous_char}'
+#         previous_char = char
+#         count = 1
+# print(code)
+

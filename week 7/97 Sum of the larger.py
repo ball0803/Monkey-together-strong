@@ -17,7 +17,7 @@ A single line shows the equations of the sum of the larger value of each pair.
 n = int(input())
 seq = tuple(map(int, input().split()))
 ans = []
-for i in range(0, n*2, 2):
+for i in range(0, n * 2, 2):
     ans.append(max(seq[i], seq[i+1]))
 print(f'{" + ".join(str(char) for char in ans)} = {sum(ans)}')
 
