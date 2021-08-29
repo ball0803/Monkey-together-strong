@@ -10,8 +10,7 @@ Output
 The number of maximally consecutive S.
 '''
 
-seq = tuple(map(int, input().split()[1:]))
-focus = 0
+seq = map(int, input().split()[1:])
 count = 1
 ans = []
 for i in range(len(seq)-1):
@@ -21,5 +20,3 @@ for i in range(len(seq)-1):
         ans.append(count)
         count = 1
 print(max(ans))
-
-

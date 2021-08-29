@@ -16,11 +16,9 @@ Third line: The difference of the two maximum values
 '''
 
 seq = set(map(int, input().split()[:-1]))
-odd = set(num for num in seq if num % 2 == 1)
-even = seq.difference(odd)
+odd = max(num for num in seq if num % 2 == 1)
+even = max(num for num in seq if num % 2 == 0)
 
-
-print(max(odd))
-print(max(even))
-print(abs(max(odd)-max(even)))
-
+print(odd)
+print(even)
+print(abs(odd - even))
