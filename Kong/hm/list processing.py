@@ -1,22 +1,15 @@
-def filter_similarity(data, t, u_or_s) -> list:
+def filter_similarity(data, t, u_or_s):
     if u_or_s == 'u':
         new_data = tuple((value[0], value[1], value[4]) for value in data)
     else:
         new_data = tuple((value[2], value[3], value[4]) for value in data)
-    pairs = []
 
-    for i, j, similarity in new_data:
-        if similarity >= t:
-            pairs.append([i, j])
+    pairs = [[i, j] for i, j, similarity in new_data if similarity >= t] 
     return pairs
 
 def find_group(pairs) -> list:
-    seen = []
+    seen = [pairs[0]]
     for i, j in pairs:
-        if not seen:
-            seen.append([i, j])
-            continue
-        
         for waiting in seen:
             if i in waiting or j in waiting:
                 waiting.append(i if j in waiting else j)
@@ -30,7 +23,6 @@ def find_group(pairs) -> list:
         seen_sorted = [sorted(i, key=lambda x: int(x)) for i in seen]
 
     return list(sorted(seen_sorted))
-
 
 def find_number_of_similar_users(user_pairs, n):
     lookup = []
