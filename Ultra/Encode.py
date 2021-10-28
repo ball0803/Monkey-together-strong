@@ -1,13 +1,10 @@
-VOWELS = {char for char in 'aeiuo'}
-
-string = input()
-
-encode = ''
-for char in string:
-    if char.lower() in VOWELS:
-        offset = 2
-    else:
-        offset = 1
-    char = ord(char) + offset
-    encode += chr(char)
-print(encode)
+print("hello world")
+x = "hello world"
+print(x)
+x = "hello world"
+print("{}". format (x))
+y =[]
+x[10] = ["h","e","l","l","o","w","o","r","l,","d"]
+for i in range (0,10):
+       y.append(x[i])
+print("{}".format(y))
