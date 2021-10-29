@@ -1,5 +1,6 @@
 GRADE = {
-    key:4-(0.5*i) for i, key in enumerate(['A', 'B+', 'B', 'C+', 'C', 'D+', 'D', 'F'])
+    key:4-(0.5*i) 
+    for i, key in enumerate(['A', 'B+', 'B', 'C+', 'C', 'D+', 'D', 'F'])
 }
 
 
