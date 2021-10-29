@@ -1,3 +1,6 @@
+
+### NOT FINISH
+
 import re
 def shift(file_in, time_shift, file_out):
     re_comp = re.compile(r'^(\d+):(\d+):(\d+),(\d+)\s+--\>\s+(\d+):(\d+):(\d+),(\d+)')
