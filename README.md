@@ -9,4 +9,4 @@ Burapha University | BUU | `Python`
 Bangkok University | BU | `Python`
 Chulalongkorn University| CU | `Python`
 King Mongkut's University of Technology Thonburi | KMUTT | `Python`
-King Mongkut's Institute of Technology Ladkrabang | KMILT| `C`</br>`Python`
+King Mongkut's Institute of Technology Ladkrabang | KMITL| `C`</br>`Python`
