@@ -1,5 +1,6 @@
 from typing import List
 from itertools import combinations
+
 test = [
     [0,8,7],
     [6,5,4],
